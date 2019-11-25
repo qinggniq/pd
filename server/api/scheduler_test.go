@@ -76,7 +76,7 @@ func (s *testScheduleSuite) TestAPI(c *C) {
 				exceptMap["1"] = []interface{}{map[string]interface{}{"end-key": "", "start-key": ""}}
 				c.Assert(resp["store-id-ranges"], DeepEquals, exceptMap)
 
-				//using /pd/v1/schedule-config/grant-leader-scheduler/config to add new store to evict-leader-scheduler
+				//using /pd/v1/schedule-config/grant-leader-scheduler/config to add new store to grant-leader-scheduler
 				input := make(map[string]interface{})
 				input["name"] = "grant-leader-scheduler"
 				input["store_id"] = 2
